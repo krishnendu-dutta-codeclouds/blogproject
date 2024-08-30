@@ -18,7 +18,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <MyState>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
