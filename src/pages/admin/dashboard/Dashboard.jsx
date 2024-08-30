@@ -44,10 +44,10 @@ function Dashboard() {
                         <h2
                             style={{ color: mode === 'dark' ? 'white' : 'black' }} className="font-semibold flex items-center gap-2">
                             <SiReact/>
-                            React Developer
+                            Frontend Developer
                         </h2>
                         <h2
-                            style={{ color: mode === 'dark' ? 'white' : 'black' }} className="font-semibold flex items-center gap-2"><SiMinutemailer /> krishnendu.rantu@gmail.com
+                            style={{ color: mode === 'dark' ? 'white' : 'black' }} className="font-semibold flex items-center gap-2"><SiMinutemailer /> krishnendu.dutta@codeclouds.in
                         </h2>
                         <h2
                             style={{ color: mode === 'dark' ? 'white' : 'black' }} className="font-semibold flex items-center gap-2">
