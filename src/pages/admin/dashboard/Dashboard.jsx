@@ -169,11 +169,17 @@ function Dashboard() {
                                                         {/* Delete Blog  */}
                                                         <td style={{ color: mode === 'dark' ? 'white' : 'black' }}
                                                          className="px-6 py-4"
-                                                         onClick={()=> deleteBlogs(id)}
                                                          >
-                                                            <button className=' px-4 py-1 rounded-lg text-white font-bold bg-red-500'>
-                                                                Delete
-                                                            </button>
+                                                            <div className="flex gap-2">
+                                                                <button className='px-4 py-1 rounded-lg text-white font-bold bg-red-500' onClick={()=> deleteBlogs(id)}>
+                                                                    Delete
+                                                                </button>
+                                                                <Link to={`/editblog/${id}`}>
+                                                                    <button className='px-4 py-1 rounded-lg text-white font-bold bg-blue-500'>
+                                                                        Edit
+                                                                    </button>
+                                                                </Link>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                 </tbody>

@@ -13,6 +13,7 @@ import AdminLogin from "./pages/admin/adminLogin/AdminLogin";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
 import MyState from "./context/data/myState";
 import CreateBlog from "./pages/admin/createblog/CreateBlog";
+import EditBlog from "./pages/admin/editblog/EditBlog";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -33,6 +34,11 @@ function App() {
           <Route path="/createblog" element={
             <ProtectedRouteForAdmin>
               <CreateBlog />
+            </ProtectedRouteForAdmin>
+          } />
+          <Route path="/editblog/:id" element={
+            <ProtectedRouteForAdmin>
+              <EditBlog />
             </ProtectedRouteForAdmin>
           } />
           <Route path="/*" element={<NoPage />} />
