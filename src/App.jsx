@@ -1,5 +1,4 @@
 import {
-  BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
@@ -19,32 +18,30 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <MyState>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/allblogs" element={<AllBlogs />} />
-          <Route path="/bloginfo/:id" element={<BlogInfo />} />
-          <Route path="/adminlogin" element={<AdminLogin />} />
-          <Route path="/dashboard" element={
-            <ProtectedRouteForAdmin>
-              <Dashboard />
-            </ProtectedRouteForAdmin>
-          } />
-          <Route path="/createblog" element={
-            <ProtectedRouteForAdmin>
-              <CreateBlog />
-            </ProtectedRouteForAdmin>
-          } />
-          <Route path="/editblog/:id" element={
-            <ProtectedRouteForAdmin>
-              <EditBlog />
-            </ProtectedRouteForAdmin>
-          } />
-          <Route path="/*" element={<NoPage />} />
-        </Routes>
-        <Toaster/>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/allblogs" element={<AllBlogs />} />
+        <Route path="/bloginfo/:id" element={<BlogInfo />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
+        <Route path="/dashboard" element={
+          <ProtectedRouteForAdmin>
+            <Dashboard />
+          </ProtectedRouteForAdmin>
+        } />
+        <Route path="/createblog" element={
+          <ProtectedRouteForAdmin>
+            <CreateBlog />
+          </ProtectedRouteForAdmin>
+        } />
+        <Route path="/editblog/:id" element={
+          <ProtectedRouteForAdmin>
+            <EditBlog />
+          </ProtectedRouteForAdmin>
+        } />
+        <Route path="/*" element={<NoPage />} />
+      </Routes>
+      <Toaster/>
     </MyState>
   )
 }
